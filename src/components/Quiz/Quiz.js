@@ -6,10 +6,10 @@ const Quiz = () => {
     const { id, name, questions: quizQuestions, total } = useLoaderData().data
 
     return (
-        <div className='grid grid-cols-3 md:container mx-auto my-10 bg-green-100'>
+        <div className='grid grid-cols-3 md:container mx-auto my-10 '>
             <div className='col-span-2 '>
                 {/* question container */}
-                <h1>Quiz Of {name}</h1>
+                <h1 className='text-xl text-center font-bold text-green-600 pb-10'>Quiz Of {name}</h1>
                 {
                     quizQuestions.map(singleQuestion => <QuizQuestion key={singleQuestion.id} singleQuestion={singleQuestion}></QuizQuestion>)
                 }
