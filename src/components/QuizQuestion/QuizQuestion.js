@@ -1,13 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { EyeSlashIcon, EyeIcon } from '@heroicons/react/24/solid'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const QuizQuestion = ({ singleQuestion }) => {
     const { correctAnswer, id, options, question } = singleQuestion;
-    console.log(options)
+    // console.log(options);
+
+
+    const handleAns = () => {
+        toast.success(correctAnswer, {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+
+
+    }
+
     return (
-        <div className='text-green-700 shadow-lg mb-10 p-6'>
-            <div className='questionPart'>
-                <p className='text-xl font-bold mb-7 text-center'>Quiz : {question}</p>
+
+        <div className='text-green-700 shadow-lg mb-[110px] p-6'>
+            <div className='flex justify-between items-center'>
+                <p className='text-xl font-bold mb-7 text-center flex-grow '>Quiz : {question}</p>
+                <EyeSlashIcon onClick={handleAns} className="h-6 w-6 text-green-600" />
+                <ToastContainer
+                    position="top-center"
+                    autoClose={2000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                />
+
             </div>
+
             <div className='grid grid-cols-2 gap-4'>
                 {
                     options.map(option => {
@@ -19,6 +55,7 @@ const QuizQuestion = ({ singleQuestion }) => {
                     })
                 }
             </div>
+
         </div>
     );
 };
