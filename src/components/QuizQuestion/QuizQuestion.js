@@ -22,7 +22,7 @@ const QuizQuestion = ({ singleQuestion, rightAns, setRightAns, wrongAns, setWron
         }
         else {
             setWrongAns(wrongAns + 1)
-            toast.warning('Wrong Ans', {
+            toast.error('Wrong Ans', {
                 position: "top-center",
                 autoClose: 1000,
                 hideProgressBar: false,

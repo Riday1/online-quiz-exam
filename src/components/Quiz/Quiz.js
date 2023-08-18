@@ -23,12 +23,14 @@ const Quiz = () => {
                 }
             </div>
 
-            <div className=''>
+            <div>
                 {/* Ans container */}
-                <h1 className='text-xl text-center font-bold text-green-600 pb-10'>Ans container</h1>
-                <div className='w-[200px] mx-auto  text-green-600 text-xl font-semibold'>
-                    <h3 className='flex justify-between items-center  mb-4 '><p>Right Ans : </p><span>{rightAns}</span></h3>
-                    <h3 className='flex justify-between items-center  mb-4 '><p>Wrong Ans : </p><span className='text-red-600 '>{wrongAns}</span></h3>
+                <div className='sticky top-10'>
+                    <h1 className='text-xl text-center font-bold text-green-600 pb-10'>Ans container</h1>
+                    <div className='w-[200px] mx-auto  text-green-600 text-xl font-semibold'>
+                        <h3 className='flex justify-between items-center  mb-4 '><p>Right Ans : </p><span>{rightAns}</span></h3>
+                        <h3 className='flex justify-between items-center  mb-4 '><p>Wrong Ans : </p><span className='text-red-600 '>{wrongAns}</span></h3>
+                    </div>
                 </div>
             </div>
         </div>
