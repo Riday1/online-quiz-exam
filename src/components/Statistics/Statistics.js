@@ -38,6 +38,9 @@ const Statistics = () => {
                 <Bar dataKey="total" fill="#82ca9d" />
             </BarChart>
 
+
+
+
         </div>
     );
 };

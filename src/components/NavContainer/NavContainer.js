@@ -9,7 +9,7 @@ const NavContainer = () => {
                 <div className=''>
                     <Link className='text-md font-semibold mr-10' to='/'>Home</Link>
                     <Link className='text-md font-semibold mr-10' to='/statistics'>Statistics</Link>
-                    <Link className='text-md font-semibold mr-10' to='/blog'>Blog</Link>
+                    <Link className='text-md font-semibold mr-10' to='/blogs'>Blogs</Link>
                 </div>
             </div>
         </nav>
