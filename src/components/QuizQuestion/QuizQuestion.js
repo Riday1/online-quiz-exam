@@ -5,8 +5,34 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const QuizQuestion = ({ singleQuestion }) => {
     const { correctAnswer, id, options, question } = singleQuestion;
-    // console.log(options);
 
+    const checkAnsHandler = (selectedAns) => {
+        console.log(selectedAns, correctAnswer);
+        if (selectedAns === correctAnswer) {
+            toast.success('Right Ans', {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+        else {
+            toast.warning('Wrong Ans', {
+                position: "top-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+    }
 
     const handleAns = () => {
         toast.success(correctAnswer, {
@@ -48,7 +74,7 @@ const QuizQuestion = ({ singleQuestion }) => {
                 {
                     options.map(option => {
                         return (
-                            <button className='bg-green-100 p-5 border-2 border-gray-300 rounded-md'>
+                            <button onClick={() => checkAnsHandler(option)} className='bg-green-100 p-5 border-2 border-gray-300 rounded-md'>
                                 <p >{option}</p>
                             </button>
                         )
