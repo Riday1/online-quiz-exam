@@ -22,10 +22,10 @@ const Nav = () => {
                             <NavLink to="/" className={`block py-2 pl-3 pr-4   rounded md:bg-transparent  md:p-0 hover:bg-green-100 md:hover:bg-white  dark:text-white md:dark:text-blue-500 md:hover:text-green-700 ${({ isActive }) => isActive ? "underline text-green-500" : ""}`} aria-current="page">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/statistics" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-green-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</NavLink>
+                            <NavLink to="/statistics" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-green-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Statistics</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/blogs" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-green-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</NavLink>
+                            <NavLink to="/blogs" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-green-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blogs</NavLink>
                         </li>
 
                     </ul>

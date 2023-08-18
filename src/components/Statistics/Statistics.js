@@ -15,10 +15,10 @@ const Statistics = () => {
 
 
     return (
-        <div className='my-40'>
+        <div className='my-20'>
 
             <BarChart
-                className='mx-auto'
+                className='mx-auto '
                 width={800}
                 height={400}
                 data={requiredData}
@@ -34,14 +34,14 @@ const Statistics = () => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-
                 <Bar dataKey="total" fill="#82ca9d" />
             </BarChart>
 
-
-
-
         </div>
+
+
+
+
     );
 };
 
