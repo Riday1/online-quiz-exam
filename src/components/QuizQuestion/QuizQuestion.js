@@ -3,12 +3,12 @@ import { EyeSlashIcon, EyeIcon } from '@heroicons/react/24/solid'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const QuizQuestion = ({ singleQuestion }) => {
+const QuizQuestion = ({ singleQuestion, rightAns, setRightAns, wrongAns, setWrongAns }) => {
     const { correctAnswer, id, options, question } = singleQuestion;
 
     const checkAnsHandler = (selectedAns) => {
-        console.log(selectedAns, correctAnswer);
         if (selectedAns === correctAnswer) {
+            setRightAns(rightAns + 1);
             toast.success('Right Ans', {
                 position: "top-center",
                 autoClose: 1000,
@@ -21,6 +21,7 @@ const QuizQuestion = ({ singleQuestion }) => {
             });
         }
         else {
+            setWrongAns(wrongAns + 1)
             toast.warning('Wrong Ans', {
                 position: "top-center",
                 autoClose: 1000,
@@ -72,9 +73,9 @@ const QuizQuestion = ({ singleQuestion }) => {
 
             <div className='grid grid-cols-2 gap-4'>
                 {
-                    options.map(option => {
+                    options.map((option, index) => {
                         return (
-                            <button onClick={() => checkAnsHandler(option)} className='bg-green-100 p-5 border-2 border-gray-300 rounded-md'>
+                            <button key={index} onClick={() => checkAnsHandler(option)} className='bg-green-100 p-5 border-2 border-gray-300 rounded-md'>
                                 <p >{option}</p>
                             </button>
                         )
